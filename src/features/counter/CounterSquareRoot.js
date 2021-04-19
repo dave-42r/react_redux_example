@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
-  square,
+  squareRoot,
   selectCount,
 } from './counterSlice';
 import styles from './Counter.module.css';
 
-export function CounterSquared() {
+export function CounterSquareRoot() {
   const count = useSelector(selectCount);
   const dispatch = useDispatch();
 
   return (
         <button
           className={styles.button}
-          aria-label="Square value"
-          onClick={() => dispatch(square())}
+          aria-label="Square root value"
+          onClick={() => dispatch(squareRoot())}
         >
-          Square
+          Square root
         </button>
   );
 }

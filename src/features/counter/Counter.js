@@ -8,6 +8,8 @@ import {
   incrementIfOdd,
   selectCount,
 } from './counterSlice';
+import { CounterSquared } from './CounterSquared';
+import { CounterSquareRoot } from './CounterSquareRoot';
 import styles from './Counter.module.css';
 
 export function Counter() {
@@ -61,6 +63,8 @@ export function Counter() {
         >
           Add If Odd
         </button>
+        <CounterSquared />
+        <CounterSquareRoot />
       </div>
     </div>
   );
