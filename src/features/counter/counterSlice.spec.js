@@ -40,6 +40,8 @@ describe('counter reducer', () => {
   });
 
   it('should handle squareRoot', () => {
+    const squaredState = counterReducer(initialState, square());
+
     const actual = counterReducer(squaredState, squareRoot());
     expect(actual.value).toEqual(3);
   });
