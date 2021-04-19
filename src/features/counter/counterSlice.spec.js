@@ -3,6 +3,7 @@ import counterReducer, {
   decrement,
   incrementByAmount,
   square,
+  squareRoot,
 } from './counterSlice';
 
 describe('counter reducer', () => {
@@ -36,5 +37,14 @@ describe('counter reducer', () => {
     const actual = counterReducer(initialState, square());
     expect(initialState.value).toEqual(3);
     expect(actual.value).toEqual(9);
+  });
+
+  it('should handle square root', () => {
+    const actual = counterReducer(initialState, square());
+    expect(initialState.value).toEqual(3);
+    expect(actual.value).toEqual(9);
+
+    actual = counterReducer(actual, squareRoot());
+    expect(actual.value).toEqual(3);
   });
 });
