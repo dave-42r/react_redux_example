@@ -39,12 +39,8 @@ describe('counter reducer', () => {
     expect(actual.value).toEqual(9);
   });
 
-  it('should handle square root', () => {
-    const actual = counterReducer(initialState, square());
-    expect(initialState.value).toEqual(3);
-    expect(actual.value).toEqual(9);
-
-    actual = counterReducer(actual, squareRoot());
+  it('should handle squareRoot', () => {
+    const actual = counterReducer(squaredState, squareRoot());
     expect(actual.value).toEqual(3);
   });
 });
